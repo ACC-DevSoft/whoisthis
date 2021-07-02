@@ -18,8 +18,9 @@ export class HomeComponent implements OnInit {
   }
 
   play(){
-    if(this.Name == "") return console.log("digite algo")
-    localStorage.setItem('nombre', JSON.stringify(this.Name))
+    if(this.Name == "") this.Name = "Player"
+    localStorage.clear()
+    localStorage.setItem('nombre', JSON.stringify(this.Name).replace('"',' ').replace('"',' '))
     this.router.navigate(['/game'])
   }
   

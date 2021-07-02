@@ -1,3 +1,74 @@
+.font{
+    font-family:'Edo SZ';font-weight:normal;font-size:42px;
+}
+.title-main{
+    margin-top: 25px;
+    font-size: 60px;
+}
+.card-container{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.card-container .col{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 .card {
-    margin: 4rem 0;
+    width: 19%;
+    min-height: 230px;
+    height: auto;
+    perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card-front {
+  color: black;
+  padding: 80px 0px;
+  text-align: center;
+  align-items: center;
+}
+
+.card-back {
+  /* background-color: #ededed; */
+    color:#444444;
+  transform: rotateY(180deg);
+}
+
+.card-inner .card-front .title{
+    /* margin-top:px; */
+    margin: auto;
+    color:#444444;
+    text-align: center;
+}
+.card-inner .card-back .name{
+    padding: 80px 0px;
+    text-transform: capitalize;
+    margin: auto;
+    color:#444444;
+    text-align: center;
 }

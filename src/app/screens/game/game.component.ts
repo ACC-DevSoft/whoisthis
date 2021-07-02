@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../../services/service.service';
 import { Router } from "@angular/router";
 
 @Component({
@@ -9,27 +8,24 @@ import { Router } from "@angular/router";
 })
 
 export class GameComponent implements OnInit {
-  public name: String;
+  public name: any;
   public score: any;
 
-  public character: any[];
 
-  constructor(public service: ServiceService) {
+  constructor() {
     this.name = '';
-    this.character = [];
+    this.score = 0;
    }
 
   ngOnInit(): void {
-    this.service.getCharacters().subscribe(
-      (res:any) => {
-        this.character = res;
-      }
-    )
+    this.gameStart()
   }
-  goOut(){
-    // if (comfirm(this.name + " Do you want finish the game ?")) {
 
-    // }
+  gameStart(){
+    this.name = localStorage.getItem("nombre");
+    console.log(this.name);
+    
   }
+ 
 
 }
