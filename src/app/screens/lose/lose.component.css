@@ -1,0 +1,37 @@
+body{
+    background-image: url(../../../assets/img/3328.jpg);
+    background-size:cover;
+}
+.header{
+    width: 100%;
+    border-bottom: 1px solid #171717 ;
+}
+.nav{
+    flex: 1 0 auto;
+    margin: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.nav .nav-item {
+    padding-top: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #171717;
+    text-align: center;
+}
+.nav .nav-item  span{
+    color: #DA0037;
+    text-transform: uppercase;
+}
+.nav .nav-item  a{
+    text-decoration: none;
+    color: #171717;
+    cursor: pointer;
+    font-weight: 600
+    ;
+}
+.nav .nav-item  a:hover{
+    color: #DA0037;
+}

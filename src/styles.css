@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(../src/assets/img/3328.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: 'Edo SZ';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Edo SZ'), url('edosz.woff') format('woff');
+}
+
+.font{
+    font-family:'Edo SZ';font-weight:normal;font-size:42px;
+}
