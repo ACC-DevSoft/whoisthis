@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="col-sm-6 margin text-center">
+    <h1 class="card-title text-center text-white font home_title ">Guess Who?</h1>
+  <div class="card bg-transparent">
+    <div class="card-body">
+      <div class="form-floating mb-3">
+        <input
+          type="Name"
+          [(ngModel)]="Name"
+          required
+          class="form-control"
+          id="floatingInput"
+          placeholder="Inserte su nombre aqui"
+        />
+        <label for="floatingInput">Nombre</label>
+      </div>
+      <div class="text-center">
+        <a class="btn btn-primary bg-danger border border-white" (click)="play()">START</a>
+      </div>
+    </div>
+  </div>
+</div>

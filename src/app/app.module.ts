@@ -8,6 +8,9 @@ import { WinComponent } from './screens/win/win.component';
 import { LoseComponent } from './screens/lose/lose.component';
 import { HomeComponent } from './screens/home/home.component';
 
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,8 @@ import { HomeComponent } from './screens/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
