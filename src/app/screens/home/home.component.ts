@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  public Name: String;
+  public errorMessage: String;
+  constructor(private router: Router) {
+    this.Name = ""
+    this.errorMessage = ""
+   }
 
   ngOnInit(): void {
   }
 
+  play(){
+    if(this.Name == "") this.Name = "Player"
+    localStorage.clear()
+    localStorage.setItem('nombre', JSON.stringify(this.Name).replace('"',' ').replace('"',' '))
+    this.router.navigate(['/game'])
+  }
+  
 }

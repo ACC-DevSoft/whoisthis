@@ -1,7 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
 body{
     background-image: url(../src/assets/img/canvas.png);
-    background-size:cover;
-    background-repeat: no-repeat;
 }
 
 @font-face {

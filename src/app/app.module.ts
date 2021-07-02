@@ -11,6 +11,9 @@ import { CardsComponent } from './components/cards/cards.component';
 
 import {HttpClientModule} from '@angular/common/http'
 
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +26,7 @@ import {HttpClientModule} from '@angular/common/http'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
     
   ],
