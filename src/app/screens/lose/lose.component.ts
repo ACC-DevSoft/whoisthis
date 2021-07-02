@@ -10,8 +10,8 @@ export class LoseComponent implements OnInit {
   public loseData: any;
 
   constructor(private router: Router) { 
-    this.loseData = {name: "Aleja"};
-    this.loseData = {score: "20"};
+    this.loseData = {};
+  
   }
 
   ngOnInit(): void {
