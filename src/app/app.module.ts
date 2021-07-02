@@ -7,6 +7,9 @@ import { GameComponent } from './screens/game/game.component';
 import { WinComponent } from './screens/win/win.component';
 import { LoseComponent } from './screens/lose/lose.component';
 import { HomeComponent } from './screens/home/home.component';
+import { CardsComponent } from './components/cards/cards.component';
+
+import {HttpClientModule} from '@angular/common/http'
 
 import { FormsModule } from '@angular/forms';
 
@@ -17,12 +20,15 @@ import { FormsModule } from '@angular/forms';
     GameComponent,
     WinComponent,
     LoseComponent,
-    HomeComponent
+    HomeComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
