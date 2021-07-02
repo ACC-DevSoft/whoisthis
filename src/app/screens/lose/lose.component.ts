@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-lose',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lose.component.css']
 })
 export class LoseComponent implements OnInit {
+  public loseData: any;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private router: Router) { 
+    this.loseData = {};
   }
 
+  ngOnInit(): void {
+    this.getData();
+  this.loseData = localStorage.getItem('data');
+  }
+
+  home(){
+    this.loseData = {};
+    localStorage.setItem("data", this.loseData);
+    this.router.navigate(['/home']);
+  }
+
+  getData() {
+    localStorage.getItem('data');
+  }
 }

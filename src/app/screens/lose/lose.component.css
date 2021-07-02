@@ -1,0 +1,9 @@
+.title {
+    font-size:100px;
+}
+
+.styleContent {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 25%;
+}

@@ -1,1 +1,8 @@
-<p>lose works!</p>
+<div class="col-sm-6 styleContent text-center">
+  <div class="card-body">
+    <h2 class="card-title text-center text-white font title">YOU LOST! :'(</h2>
+    <h4 class="text-center text-white font">{{ loseData.name }}</h4>
+    <h4 class="text-center text-white font">Score: {{ loseData.score }}</h4>
+    <a (click)="home()" class="btn btn-primary border dorder-white">NEW GAME</a>
+  </div>
+</div>
