@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../../services/service.service';
 
 @Component({
   selector: 'app-game',
@@ -8,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 
 export class GameComponent implements OnInit {
 
-  constructor() { }
+  public character: any[];
+
+  constructor(public service: ServiceService) {
+    this.character = [];
+   }
 
   ngOnInit(): void {
+    this.service.getCharacters().subscribe(
+      (res:any) => {
+        this.character = res;
+      }
+    )
   }
 
 }
