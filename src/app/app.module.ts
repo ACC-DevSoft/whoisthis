@@ -7,6 +7,9 @@ import { GameComponent } from './screens/game/game.component';
 import { WinComponent } from './screens/win/win.component';
 import { LoseComponent } from './screens/lose/lose.component';
 import { HomeComponent } from './screens/home/home.component';
+import { CardsComponent } from './components/cards/cards.component';
+
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { HomeComponent } from './screens/home/home.component';
     GameComponent,
     WinComponent,
     LoseComponent,
-    HomeComponent
+    HomeComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
