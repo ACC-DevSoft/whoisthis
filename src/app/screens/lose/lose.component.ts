@@ -11,10 +11,10 @@ export class LoseComponent implements OnInit {
 
   constructor(private router: Router) { 
     this.loseData = {};
-  
   }
 
   ngOnInit(): void {
+    this.getData();
   this.loseData = localStorage.getItem('data');
   }
 
@@ -22,5 +22,9 @@ export class LoseComponent implements OnInit {
     this.loseData = {};
     localStorage.setItem("data", this.loseData);
     this.router.navigate(['/home']);
+  }
+
+  getData() {
+    localStorage.getItem('data');
   }
 }

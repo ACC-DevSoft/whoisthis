@@ -1,13 +1,16 @@
-<div class="container styleContent text-center">
-    <div class="row">
-        <div class="card border-info bg-transparent text-white" style="width: 18rem">
-            <div class="card-body">
-              <h1 class="card-title font">¡¡YOU WIN!!</h1>
-              <h5>{{winData.name}}</h5>
-              <h2><p>Score:</p>{{winData.score}}</h2>
-              <a (click) = "home()" class="btn btn-danger border border-white p-4 ">FINISH</a>
-              <a (click) = "game()" class="btn btn-primary border border-white p-4">TRY AGAIN</a>
-            </div>
-          </div>
-    </div>
+<div class="col-sm-6 styleContent text-center">
+  <div class="card-body">
+    <h1 class="card-title text-center text-white font title">YOU WON!!</h1>
+    <h5 class="text-center text-white font">{{ winData.name }}</h5>
+    <h2 class="text-center text-white font">
+      <p>Score:</p>
+      {{ winData.score }}
+    </h2>
+    <a (click)="home()" class="btn btn-danger border border-white p-4"
+      >FINISH</a
+    >
+    <a (click)="game()" class="btn btn-primary border border-white p-4"
+      >TRY AGAIN</a
+    >
+  </div>
 </div>
