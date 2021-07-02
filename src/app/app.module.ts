@@ -23,4 +23,5 @@ import { HomeComponent } from './screens/home/home.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
