@@ -21,7 +21,7 @@
 }
 .card {
     width: 19%;
-    min-height: 230px;
+    min-height: 250px;
     height: auto;
     perspective: 1000px;
 }
@@ -31,7 +31,7 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
@@ -69,6 +69,11 @@
     margin: auto;
     color:#444444;
     text-align: center;
+}
+.card-inner .card-back .character-img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 .card-inner .card-back .name{
     padding: 80px 0px;
