@@ -1,5 +1,5 @@
 <h1 class="card-title text-center text-white font title-main">Guess Who?</h1>
-<div class="card-container">
+<div class="card-container animate__animated animate__bounce">
   <div class="col">
     <div
       class="card"
@@ -19,39 +19,27 @@
         </div>
       </div>
 
-      <!-- <div class="card-body">
-          <p class="card-text tex-center">Who is this?.</p>
-        </div> -->
     </div>
   </div>
   <div class="col">
     <div
       class="card"
-      *ngFor="let character of characters"
-      (click)="flipCardName(character.id)"
+      *ngFor="let name of names"
+      (click)="flipCardName(name.id)"
     >
-      <div class="card-inner" [ngClass]="{ rote: (character.id === idName && flag == false) }">
+      <div class="card-inner" [ngClass]="{ rote: (name.id === idName && flag == false) }">
         <div class="card-front">
           <h1 class="title font">name</h1>
         </div>
         <div class="card-back">
-          <h2 class="name">{{ character.name }}</h2>
+          <h2 class="name">{{ name.name }}</h2>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container-check text-center my-5">
-    <button class="btn btn-success" (click)="check()">Check</button>
+  <div class="container-check text-center my-5" *ngIf="restart == true">
+    <button class="btn btn-success" (click)="restarGame()">Restart</button>
   </div>
 
-  <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let character of characters">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <p class="card-text"></p>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </div>

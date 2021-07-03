@@ -35,9 +35,6 @@
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-/* .card:hover .card-inner {
-  transform: rotateY(180deg);
-} */
 
 .rote {
   transform: rotateY(180deg);
@@ -59,8 +56,8 @@
 }
 
 .card-back {
-  /* background-color: #ededed; */
-    color:#444444;
+  background-color: #ededed;
+  color:#444444;
   transform: rotateY(180deg);
 }
 
