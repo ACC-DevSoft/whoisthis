@@ -47,6 +47,7 @@ export class CardsComponent implements OnInit {
   }
 
   restarGame() {
+    this.restart = false;
     this.idPhoto = 0;
     this.idName = 0;
     this.score = 0;
@@ -81,14 +82,12 @@ export class CardsComponent implements OnInit {
       }, 1000);
 
       console.log('Lenght is :', this.characters.length);
-
-
-      if (this.characters.length === 1) {
+      
+      if (this.names.length <2 && this.flag == false) {
         this.restart = true;
       } else {
         this.restart = false;
       }
-
 
 
     } else {
