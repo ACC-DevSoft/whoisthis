@@ -1,33 +1,49 @@
-<h1 class="card-title text-center text-white font title-main ">Guess Who?</h1>
+<h1 class="card-title text-center text-white font title-main">Guess Who?</h1>
 <div class="card-container">
-  <div class="col" >
-    <div class="card" *ngFor="let character of characters">
-      <div class="card-inner">
+  <div class="col">
+    <div
+      class="card"
+      *ngFor="let character of characters"
+      (click)="flipCardPhoto(character.id)"
+    >
+      <div class="card-inner" [ngClass]="{ rote: (character.id === idPhoto ) }">
         <div class="card-front">
           <h1 class="title font tq">?</h1>
         </div>
         <div class="card-back">
-          <img src="../../assets/{{ character.name }}.jpeg" class="card-img-top" alt="..."/>
+          <img
+            src="../../assets/{{ character.name }}.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
         </div>
       </div>
 
-        <!-- <div class="card-body">
+      <!-- <div class="card-body">
           <p class="card-text tex-center">Who is this?.</p>
         </div> -->
-      </div>
+    </div>
   </div>
   <div class="col">
-    <div class="card" *ngFor="let character of characters">
-      <div class="card-inner">
+    <div
+      class="card"
+      *ngFor="let character of characters"
+      (click)="flipCardName(character.id)"
+    >
+      <div class="card-inner" [ngClass]="{ rote: (character.id === idName && flag == false) }">
         <div class="card-front">
           <h1 class="title font">name</h1>
         </div>
         <div class="card-back">
-          <h2 class="name">{{character.name}}</h2>
+          <h2 class="name">{{ character.name }}</h2>
         </div>
       </div>
-      </div>
     </div>
+  </div>
+
+  <div class="container-check text-center my-5">
+    <button class="btn btn-success" (click)="check()">Check</button>
+  </div>
 
   <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" *ngFor="let character of characters">
@@ -38,5 +54,4 @@
       </div>
     </div>
   </div> -->
- 
 </div>
